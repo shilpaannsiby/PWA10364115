@@ -1,0 +1,6 @@
+.history/
+.tmp/
+bower_components/
+dist/
+node_modules/
+*.rar

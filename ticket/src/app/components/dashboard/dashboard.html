@@ -1,0 +1,63 @@
+﻿<section class="movie-page-header">
+    <section class="movie-title">
+        <p>
+            <h1>Dundrum Movies</h1>
+            <p>
+
+                <span class="breadcrumb">
+                    <span class="breadcrumb-inactive">Dashboard</span>
+                </span>
+            </p>
+            <p>
+                <span class="page-title">Movie List</span>
+                <span class="page-caption">
+                    All times are in Ireland Time
+                </span>
+            </p>
+        </p>
+    </section>
+
+    <section class="movie-header">
+        <div class="movie-day">
+            <span ng-repeat="dates in allDates">
+                <p class="col-lg-3 col-md-3 col-sm-3 col-xs-6" ng-click="filterDay(dates,$index);" ng-class="{'active': (activeDate==$index)}">
+                    <span ng-if="$index==0">Today </span>
+                    <span ng-if="$index==1">Tomorrow </span>
+                    <span ng-if="$index>1">{{dates | date : "EEE, d MMM" }} </span>
+                </p>
+            </span>
+        </div>
+        <div class="movie-shift">
+            <p class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <span class="col-lg-2 col-md-2 col-sm-2 col-xs-4" ng-click="filterTime('all');shiftTime='all'" ng-class="{'active': (shiftTime=='all')}">All Times</span>
+                <span class="col-lg-2 col-md-2 col-sm-2 col-xs-4" ng-click="filterTime(0,11);shiftTime='mor'" ng-class="{'active': (shiftTime=='mor')}">Morning</span>
+                <span class="col-lg-2 col-md-2 col-sm-2 col-xs-4" ng-click="filterTime(11,15);shiftTime='aft'" ng-class="{'active': (shiftTime=='aft')}">Afternoon</span>
+                <span class="col-lg-2 col-md-2 col-sm-2 col-xs-4" ng-click="filterTime(15,18);shiftTime='eve'" ng-class="{'active': (shiftTime=='eve')}">Evening</span>
+                <span class="col-lg-2 col-md-2 col-sm-2 col-xs-4" ng-click="filterTime(18,24);shiftTime='nig'" ng-class="{'active': (shiftTime=='nig')}">Night</span>
+            </p>
+        </div>
+    </section>
+</section>
+
+<section class="row movie-list">
+    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12" ng-repeat="movie in movieList">
+        <div class="movie-card">
+            <p class="movie-image">
+                <span class="movie-year">{{movie.year}}</span>
+                <span class="movie-genre">{{movie.genre}}</span>
+            </p>
+            <p class="movie-title">
+                <span>{{movie.title}}</span>
+            </p>
+            <p class="movie-time" ng-if="!movieTimeFlag" ng-repeat="runtime in movie.runningTimes[todayDate]" ng-init="movieTimeFlag=fasle"
+                ng-class="{'active': (movieTimeFlag)}" ng-click="movie.selectedTime=this.runtime;selectedTime(this);movieTimeFlag=!movieTimeFlag;">
+                <span>{{filterShiftTime(runtime)}}</span>
+            </p>
+            <p class="movie-book">
+                <span class="inactive" ng-class="{'inactive-overwrite': (movie.selectedTime.length>0)}" ng-click="bookMovie(movie)">
+                    Book Now
+                </span>
+            </p>
+        </div>
+    </div>
+</section>

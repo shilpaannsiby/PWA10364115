@@ -1,0 +1,116 @@
+﻿<section class="movie-page-header">
+    <div class="movie-title">
+        <p>
+            <h1>Dundrum Movies</h1>
+            <p>
+                <span class="breadcrumb">
+                    <span class="breadcrumb-active" ng-click="goto('dashboard')">Dashboard</span> /
+                    <span class="breadcrumb-active" ng-click="goto('tickets')">Ticket</span> /
+                    <span class="breadcrumb-inactive">Seats</span>
+                </span>
+            </p>
+            <p>
+                <span class="page-title">Select Seats</span>
+                <span class="page-caption">
+                    All times are in Ireland Time
+                </span>
+            </p>
+        </p>
+    </div>
+</section>
+
+<section class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="seats-movie">
+            <p>
+                <h1>{{selectedMovie.title}}</h1>
+                <p class="row">
+                    <span class="col-lg-3 col-md-3 col-sm-6 col-xs-6">Date : {{selectedMovie.selectedDate | date : "EEE, d MMM"}}</span>
+                    <span class="col-lg-3 col-md-3 col-sm-6 col-xs-6">Time : {{selectedMovie.selectedTime}}</span>
+                    <span class="col-lg-3 col-md-3 col-sm-6 col-xs-6">Price : €{{selectedMovie.totalCost | number : 2}}</span>
+                    <span class="col-lg-3 col-md-3 col-sm-6 col-xs-6">Seats : {{selectedMovie.totalSeat}}
+                        <span ng-show="selectedSeats.length>0">
+                            (
+                            <span ng-repeat="selected in selectedSeats">{{$index}}
+                                <span ng-hide="$index==(selectedSeats.length-1)">,&nbsp;</span>
+                            </span>)
+                        </span>
+                    </span>
+                </p>
+            </p>
+        </div>
+        <div>
+            <p class="screen">
+            </p>
+        </div>
+        <table class="" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr ng-repeat="seat in theaterSeats">
+                    <td>
+                        <span class="rowset">{{seat.seatName}}</span>
+                        <td>
+                            <span ng-repeat="seatNo  in seat.seats">
+                                <div ng-class="selectClass(seatNo.checked)" ng-hide="seatNo.checked=='empty'" ng-click="seatNo.checked=!seatNo.checked;seatSelect(seatNo.checked)">
+                                    <span class="seat-box">{{seatNo.no}}</span>
+                                </div>
+                                <div ng-show="seatNo.checked=='empty'" class="seat-empty"></div>
+                        </td>
+                        <td>
+                            <span class="rowset">{{seat.seatName}}</span>
+                        </td>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="payment-block">
+            <p class="seats-selected">
+                <span ng-repeat="selected in selectedSeats">{{selected}}
+                </span>
+            </p>
+            <button class="payment-btn" ng-disabled="selectedMovie.totalSeat!=seatCount" ng-click="gotoPayment()">Payment</button>
+            <p class="payment-message">
+                <span class="warning" ng-show="selectedMovie.totalSeat!=seatCount">Please select {{selectedMovie.totalSeat-seatCount}}
+                    <span ng-hide="seatCount==0">more</span> seats</span>
+            </p>
+        </div>
+
+        <div class="confirmed-popup" ng-show="paymentFlag">
+            <div class="confirmed-ticket">
+                <p class="confirmed-tick">
+                    <img src="../assets/images/greentick.png">
+                </p>
+                <h1 class="confirmed-heading">Ticket Confirmed</h1>
+                <p class="confirmed-heading">
+                    <h1>{{selectedMovie.title}}</h1>
+                </p>
+                <p class="confirmed-heading">
+                    <span class="col-6">Director : {{selectedMovie.director}}</span>
+                </p>
+                <p class="confirmed-heading">
+                    <span class="col-12">Cast : {{selectedMovie.cast}}</span>
+                </p>
+                <p class="confirmed-heading">
+                    <span class="col-6">{{selectedMovie.genre}}</span>&nbsp;|&nbsp;
+                    <span class="col-6">{{selectedMovie.year}}</span>
+                </p>
+                <p class="confirmed-heading">
+                    <span class="col-6">{{selectedMovie.selectedDate | date : "EEE, d MMM"}}</span>
+                    <span class="col-6"> @ {{selectedMovie.selectedTime}}</span>
+                </p>
+                <p class="confirmed-heading">
+                    <span class="col-6">Price : €{{selectedMovie.totalCost | number : 2}}</span>&nbsp;|&nbsp;
+                    <span class="col-6">Seats : {{selectedMovie.totalSeat}}</span>
+                </p>
+                <p class="confirmed-heading">
+                    <span ng-repeat="selected in selectedSeats">{{selected}} |&nbsp;</span>
+                </p>
+                <div class="payment-block">
+                    <button class="confirmed-btn" ng-click="goto('dashboard')">Home</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>

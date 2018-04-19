@@ -1,0 +1,66 @@
+﻿<section class="movie-page-header">
+    <div class="movie-title">
+        <p>
+            <h1>Dundrum Movies</h1>
+            <p>
+                <span class="breadcrumb">
+                    <span class="breadcrumb-active" ng-click="goto('dashboard')">Dashboard</span> /
+                    <span class="breadcrumb-inactive">Ticket</span>
+                </span>
+            </p>
+            <p>
+                <span class="page-title">Select Ticket</span>
+                <span class="page-caption">
+                    All times are in Ireland Time
+                </span>
+            </p>
+        </p>
+    </div>
+</section>
+
+<section class="row ticket-block">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12  movie-details">
+        <p class="movie-image">
+            <span class="movie-year">{{selectedMovie.year}}</span>
+            <span class="movie-genre">{{selectedMovie.genre}}</span>
+        </p>
+        <p>
+            <h1>{{selectedMovie.title}}</h1>
+        </p>
+        <p>
+
+            <span>{{selectedMovie.notes}}</span>
+        </p>
+        <p>
+            <h4>Director</h4>
+            <span>{{selectedMovie.director}}</span>
+        </p>
+        <p>
+            <h4>Cast</h4>
+            <span>{{selectedMovie.cast}}</span>
+        </p>
+        <p class="movie-time" ng-repeat="runtime in selectedMovie.runningTimes[selectedMovie.selectedDate]">
+            <span>{{filterShiftTime(runtime)}}</span>
+        </p>
+        <p class="ticket-seats">
+            <span class="float-left">Date : {{selectedMovie.selectedDate | date : "EEE, d MMM"}}</span>
+            <span class="float-right">Time : {{selectedMovie.selectedTime}}</span>
+        </p>
+        <p class="ticket-price">
+            <span class="float-left">Seats : {{totalSeat}}</span>
+            <span class="float-right">Cost : €{{totalCost | number : 2}}</span>
+        </p>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ticket-details">
+        <p ng-repeat="offer in ticketOffers">
+            <select ng-model="offer.count" ng-options="seat for seat in seatCount" ng-change="seatCalculation()">
+                <option value="">None</option>
+            </select>
+            <span class="ticket-offer">{{offer.offer }}{{offer.price}}</span>
+        </p>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ticket-seat-select" ng-class="{'inactive': (totalSeat<=0)}">
+            <span ng-click="goto('seats')">Select Seats</span>
+        </div>
+    </div>
+</section>

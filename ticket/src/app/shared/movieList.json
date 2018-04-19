@@ -1,0 +1,131 @@
+[{
+        "title": "Geostorm",
+        "year": 2016,
+        "director": "Dean Devlin",
+        "cast": "Gerard Butler, Andy Garcia, Ed Harris, Katheryn Winnick",
+        "genre": "Action",
+        "notes": "Warner Bros.",
+        "runningTimes": {
+            "mon": ["12:00", "14:30", "16:50", "18:40"],
+            "tue": ["14:45", "18:35", "21:45"],
+            "wed": ["18:35", "20:55", "23:45"],
+            "thu": ["09:15", "13:15", "16:55", "19:10"],
+            "fri": ["14:3", "16:50", "19:10"],
+            "sat": ["16:50", "19:10"],
+            "sun": ["09:15", "11:15", "12:00", "14:30", "16:50", "18:40"]
+        }
+    }, {
+        "title": "The Jungle Book",
+        "year": 2016,
+        "director": "Jon Favreau",
+        "cast": "Bill Murray, Ben Kingsley, Idris Elba",
+        "genre": "Adventure",
+        "notes": "Walt Disney Pictures, Based on the story of the same name by Rudyard Kipling",
+        "runningTimes": {
+            "mon": ["12:00", "14:30", "16:50", "18:40"],
+            "tue": ["14:45", "18:35", "21:45"],
+            "wed": ["18:35", "20:55", "23:45"],
+            "thu": ["09:15", "13:15", "16:55", "19:10"],
+            "fri": ["14:3", "16:50", "19:10"],
+            "sat": ["16:50", "19:10"],
+            "sun": ["09:15", "11:15", "12:00", "14:30", "16:50", "18:40"]
+        }
+    }, {
+        "title": "Dirty Grandpa",
+        "year": 2016,
+        "director": "Dan Mazer",
+        "cast": "Zac Efron, Robert De Niro, Zoey Deutch, Aubrey Plaza",
+        "genre": "Comedy",
+        "notes": "Lions Gate Entertainment",
+        "runningTimes": {
+            "mon": ["12:00", "14:30", "16:50", "18:40"],
+            "tue": ["14:45", "18:35", "21:45"],
+            "wed": ["18:35", "20:55", "23:45"],
+            "thu": ["09:15", "13:15", "16:55", "19:10"],
+            "fri": ["14:3", "16:50", "19:10"],
+            "sat": ["16:50", "19:10"],
+            "sun": ["09:15", "11:15", "12:00", "14:30", "16:50", "18:40"]
+        }
+    }, {
+        "title": "Angry Birds",
+        "year": 2016,
+        "director": "Clay Kaytis",
+        "cast": "Jason Sudeikis, Josh Gad, Bill Hader, Peter Dinklage",
+        "genre": "Animation, Action",
+        "notes": "Columbia Pictures, Based on the video game of the same name",
+        "runningTimes": {
+            "mon": ["12:00", "14:30", "16:50", "18:40"],
+            "tue": ["14:45", "18:35", "21:45"],
+            "wed": ["18:35", "20:55", "23:45"],
+            "thu": ["09:15", "13:15", "16:55", "19:10"],
+            "fri": ["14:3", "16:50", "19:10"],
+            "sat": ["16:50", "19:10"],
+            "sun": ["09:15", "11:15", "12:00", "14:30", "16:50", "18:40"]
+        }
+    }, {
+        "title": "Finding Dory",
+        "year": 2016,
+        "director": "Andrew Stanton",
+        "cast": "Ellen DeGeneres, Albert Brooks, Diane Keaton, Eugene Levy",
+        "genre": "Animation, Adventure",
+        "notes": "Walt Disney Pictures, Sequel to Finding Nemo (2003)",
+        "runningTimes": {
+            "mon": ["12:00", "14:30", "16:50", "18:40"],
+            "tue": ["14:45", "18:35", "21:45"],
+            "wed": ["18:35", "20:55", "23:45"],
+            "thu": ["09:15", "13:15", "16:55", "19:10"],
+            "fri": ["14:3", "16:50", "19:10"],
+            "sat": ["16:50", "19:10"],
+            "sun": ["09:15", "11:15", "12:00", "14:30", "16:50", "18:40"]
+        }
+    }, {
+        "title": "Alice in Wonderland: Through the Looking Glass",
+        "year": 2016,
+        "director": "James Bobin",
+        "cast": "Mia Wasikowska, Johnny Depp, Helena Bonham Carter, Anne Hathaway",
+        "genre": "Fantasy",
+        "notes": "Walt Disney Pictures, Based on the novel Through the Looking-Glass (1971) by Lewis Carroll, Sequel to Alice in Wonderland (2010)",
+        "runningTimes": {
+            "mon": ["12:00", "14:30", "16:50", "18:40"],
+            "tue": ["14:45", "18:35", "21:45"],
+            "wed": ["18:35", "20:55", "23:45"],
+            "thu": ["09:15", "13:15", "16:55", "19:10"],
+            "fri": ["14:3", "16:50", "19:10"],
+            "sat": ["16:50", "19:10"],
+            "sun": ["09:15", "11:15", "12:00", "14:30", "16:50", "18:40"]
+        }
+    }, {
+        "title": "Cold Comes the Night",
+        "year": 2014,
+        "director": "Tze Shun",
+        "cast": "Alice Eve, Bryan Cranston, Logan Marshall-Green, Ursula Parker",
+        "genre": "Thriller",
+        "notes": "Sony Pictures Worldwide Acquisitions",
+        "runningTimes": {
+            "mon": ["12:00", "14:30", "16:50", "18:40"],
+            "tue": ["14:45", "18:35", "21:45"],
+            "wed": ["18:35", "20:55", "23:45"],
+            "thu": ["09:15", "13:15", "16:55", "19:10"],
+            "fri": ["14:3", "16:50", "19:10"],
+            "sat": ["16:50", "19:10"],
+            "sun": ["09:15", "11:15", "12:00", "14:30", "16:50", "18:40"]
+        }
+    },
+    {
+        "title": "Open Grave",
+        "year": 2014,
+        "director": "Gonzalo López-Gallego",
+        "cast": "Sharlto Copley, Joseph Morgan, Josie Ho, Thomas Kretschmann",
+        "genre": "Thriller",
+        "notes": "Tribeca Films",
+        "runningTimes": {
+            "mon": ["12:00", "14:30", "16:50", "18:40"],
+            "tue": ["14:45", "18:35", "21:45"],
+            "wed": ["18:35", "20:55", "23:45"],
+            "thu": ["09:15", "13:15", "16:55", "19:10"],
+            "fri": ["14:3", "16:50", "19:10"],
+            "sat": ["16:50", "19:10"],
+            "sun": ["09:15", "11:15", "12:00", "14:30", "16:50", "18:40"]
+        }
+    }
+]
